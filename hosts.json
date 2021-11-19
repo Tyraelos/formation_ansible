@@ -1,0 +1,132 @@
+{
+  "all": {
+    "hosts": {
+      "haproxy",
+      "web1",
+      "ctr-ansible",
+      "web2"
+    }
+  },
+  "_meta": {
+    "hostvars": {
+      "haproxy": {
+        "proxmox_type": "lxc",
+        "proxmox_maxdisk": 12573614080,
+        "proxmox_mem": 34385920,
+        "proxmox_vmid": "101",
+        "proxmox_cpu": 0,
+        "proxmox_name": "haproxy",
+        "proxmox_uptime": 1416,
+        "proxmox_maxswap": 536870912,
+        "proxmox_disk": 882200576,
+        "proxmox_cpus": 1,
+        "proxmox_maxmem": 536870912,
+        "proxmox_netout": 11748,
+        "proxmox_diskwrite": 0,
+        "proxmox_pid": 5715,
+        "proxmox_swap": 0,
+        "proxmox_diskread": 300302336,
+        "proxmox_netin": 122456,
+        "proxmox_status": "running",
+        "ansible_host": false,
+        "groups": [
+          "ha",
+          "all"
+        ]
+      },
+      "web1": {
+        "proxmox_uptime": 1414,
+        "proxmox_disk": 896733184,
+        "proxmox_maxswap": 536870912,
+        "proxmox_cpu": 0,
+        "proxmox_vmid": "102",
+        "proxmox_name": "web1",
+        "proxmox_mem": 40116224,
+        "proxmox_maxdisk": 12573614080,
+        "proxmox_type": "lxc",
+        "proxmox_netin": 120769,
+        "proxmox_status": "running",
+        "proxmox_diskread": 308346880,
+        "proxmox_diskwrite": 0,
+        "proxmox_pid": 6096,
+        "proxmox_swap": 0,
+        "proxmox_maxmem": 536870912,
+        "proxmox_netout": 11748,
+        "proxmox_cpus": 1,
+        "ansible_host": false,
+        "groups": [
+          "web",
+          "all"
+        ]
+      },
+      "ctr-ansible": {
+        "proxmox_type": "lxc",
+        "proxmox_maxdisk": 12573614080,
+        "proxmox_mem": 68960256,
+        "proxmox_vmid": "100",
+        "proxmox_cpu": 0,
+        "proxmox_name": "ctr-ansible",
+        "proxmox_uptime": 1418,
+        "proxmox_maxswap": 536870912,
+        "proxmox_disk": 2079969280,
+        "proxmox_cpus": 1,
+        "proxmox_netout": 166625,
+        "proxmox_maxmem": 536870912,
+        "proxmox_pid": 5561,
+        "proxmox_diskwrite": 0,
+        "proxmox_swap": 0,
+        "proxmox_diskread": 442769408,
+        "proxmox_netin": 279513,
+        "proxmox_status": "running",
+        "ansible_host": false,
+        "groups": [
+          "all"
+        ]
+      },
+      "web2": {
+        "proxmox_vmid": "103",
+        "proxmox_cpu": 0,
+        "proxmox_name": "web2",
+        "proxmox_uptime": 1412,
+        "proxmox_maxswap": 536870912,
+        "proxmox_disk": 896737280,
+        "proxmox_type": "lxc",
+        "proxmox_maxdisk": 12573614080,
+        "proxmox_mem": 37974016,
+        "proxmox_diskread": 306397184,
+        "proxmox_netin": 118807,
+        "proxmox_status": "running",
+        "proxmox_cpus": 1,
+        "proxmox_maxmem": 536870912,
+        "proxmox_netout": 11516,
+        "proxmox_diskwrite": 0,
+        "proxmox_pid": 6475,
+        "proxmox_swap": 0,
+        "ansible_host": false,
+        "groups": [
+          "web",
+          "all"
+        ]
+      }
+    }
+  },
+  "ha": {
+    "hosts": {
+      "haproxy"
+   }
+  },
+  "running": {
+    "hosts": {
+      "haproxy",
+      "web1",
+      "ctr-ansible",
+      "web2"
+    }
+  },
+  "web": {
+    "hosts": {
+      "web1",
+      "web2"
+    }
+  }
+}

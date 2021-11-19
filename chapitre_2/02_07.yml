@@ -1,0 +1,26 @@
+---
+- name: Installation des serveurs web
+  hosts: web
+  vars:
+    apache_port: 80
+    tomcat_port: 8080
+    apache_max_keepalive: 25
+  remote_user: ansible
+  become: yes
+  ## rajouté lors de l'execution --ask-become-pass
+  tasks:
+  - name: Install du package apache
+    apt:
+      name: apache2
+      state: latest
+  - name: Start du service apache
+    service:
+      name: apache2
+      state: started
+  - name: debug
+    debug:
+      msg: "Ceci n'apparait qu'avec l'option -vv+"
+      verbosity: 2
+    tags: 
+    - debug
+

@@ -1,0 +1,17 @@
+---
+# tasks file for create_user
+- name: Create User on Remote host
+  become: yes
+  user:
+          name: '{{user_name}}'
+          state: '{{user_state}}'
+          remove: yes
+          shell: /bin/bash
+          groups: root
+          append: yes
+
+- name: Add Brashrc to include host and user
+  become: yes
+  template:
+          src: templates/bashrc.j2
+          dest: '~{{user_name}}/.bashrc'
